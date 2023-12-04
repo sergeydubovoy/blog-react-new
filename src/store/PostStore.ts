@@ -106,6 +106,7 @@ class PostStore {
   handleEditButtonClick = (formData: TPost) => {
     this.selectedPost = { ...formData };
     this.isModalOpen = true;
+    this.formData = { title: formData.title, text: formData.text };
   };
 }
 
