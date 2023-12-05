@@ -1,11 +1,11 @@
 import { observer } from "mobx-react";
 import React from "react";
-import { INPUT_NAME, PLACEHOLDERS } from "../../pages/PostsPage/PostsPage";
 import PostStore from "../../store/PostStore";
 import { AddButton } from "../AddButton/AddButton";
 import { InputText } from "../InputText/InputText";
 import { InputTitle } from "../InputTitle/InputTitle";
 import { SForm } from "./FormStyles";
+import { INPUT_NAME, PLACEHOLDERS } from "../../utils/constants";
 
 export type TForm = {
   textButton: string;
@@ -14,7 +14,6 @@ export type TForm = {
   onInput?: (event: React.FormEvent<HTMLInputElement>) => void;
   handleInputChange?: (event: React.FormEvent<HTMLInputElement>) => void;
   onClick: () => void;
-  // disabled: boolean;
 };
 
 export type TFormProps = {
@@ -31,7 +30,6 @@ export const Form: React.FC<TFormProps> = observer(({ form }) => {
           value: PostStore.formData.title,
           name: INPUT_NAME.titleNameForm,
           type: "text",
-          // disabled: PostStore.isModalOpen,
         }}
       />
       <InputText

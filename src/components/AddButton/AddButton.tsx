@@ -13,7 +13,7 @@ export const SAddButton = styled.button`
   font-weight: 800;
   text-transform: uppercase;
   transition: all 0.2s linear;
-  box-shadow: 1.4px 1.4px 2.2px rgba(0, 0, 0, 0.02),
+  box-shadow: 1.4px 1.4px 2.2px rgba(58, 35, 35, 0.02),
     3.4px 3.4px 5.3px rgba(0, 0, 0, 0.028),
     6.4px 6.4px 10px rgba(0, 0, 0, 0.035),
     11.4px 11.4px 17.9px rgba(0, 0, 0, 0.042),

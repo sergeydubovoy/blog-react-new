@@ -29,7 +29,6 @@ export type TInput = {
   placeholder: string;
   value: string;
   onInput: (event: React.FormEvent<HTMLInputElement>) => void;
-  // disabled: boolean;
 };
 
 export type TInputProps = {
@@ -44,7 +43,6 @@ export const InputTitle = observer(({ input }: TInputProps) => {
       placeholder={input.placeholder}
       value={input.value}
       onInput={input.onInput}
-      // disabled={input.disabled}
     />
   );
 });
