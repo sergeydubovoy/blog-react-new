@@ -23,6 +23,7 @@ const PostsPage = observer(() => {
           form={{
             textButton: BUTTON_TEXT.save,
             onClick: () => PostStore.handleAddButtonClick,
+            isModalForm: false,
           }}
         />
         <Feed>
@@ -55,6 +56,7 @@ const PostsPage = observer(() => {
               form={{
                 textButton: BUTTON_TEXT.save,
                 onClick: () => PostStore.handleUpdatePost,
+                isModalForm: true,
               }}
             />
           </Container>

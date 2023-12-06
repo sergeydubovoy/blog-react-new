@@ -14,6 +14,7 @@ export type TForm = {
   onInput?: (event: React.FormEvent<HTMLInputElement>) => void;
   handleInputChange?: (event: React.FormEvent<HTMLInputElement>) => void;
   onClick: () => void;
+  isModalForm: boolean;
 };
 
 export type TFormProps = {
@@ -21,13 +22,26 @@ export type TFormProps = {
 };
 
 export const Form: React.FC<TFormProps> = observer(({ form }) => {
+  const isModalForm = form.isModalForm;
+
+  let titleCurrentValue: string = "";
+  let textCurrentValue: string = "";
+
+  if (isModalForm) {
+    titleCurrentValue = PostStore.isModalOpen ? PostStore.formData.title : "";
+    textCurrentValue = PostStore.isModalOpen ? PostStore.formData.text : "";
+  } else if (!isModalForm) {
+    titleCurrentValue = PostStore.isModalOpen ? "" : PostStore.formData.title;
+    textCurrentValue = PostStore.isModalOpen ? "" : PostStore.formData.text;
+  }
+
   return (
-    <SForm onSubmit={PostStore.handleFormSubmit}>
+    <SForm onSubmit={PostStore.handleFormSubmit} isModalForm={form.isModalForm}>
       <InputTitle
         input={{
           placeholder: PLACEHOLDERS.title,
           onInput: PostStore.handleInputChange,
-          value: PostStore.formData.title,
+          value: titleCurrentValue,
           name: INPUT_NAME.titleNameForm,
           type: "text",
         }}
@@ -36,7 +50,7 @@ export const Form: React.FC<TFormProps> = observer(({ form }) => {
         textarea={{
           placeholder: PLACEHOLDERS.text,
           onInput: PostStore.handleInputChange,
-          value: PostStore.formData.text,
+          value: textCurrentValue,
           name: INPUT_NAME.textNameForm,
         }}
       />

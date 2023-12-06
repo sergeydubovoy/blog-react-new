@@ -1,12 +1,10 @@
 import styled from "styled-components";
 
-// export const SForm = styled.form`
-//   display: flex;
-//   flex-direction: column;
-//   gap: 30px;
-// `;
+interface SFormProps {
+  isModalForm: boolean;
+}
 
-export const SForm = styled.form`
+export const SForm = styled.form<SFormProps>`
   margin: 0 auto;
   padding: 20px;
   position: relative;

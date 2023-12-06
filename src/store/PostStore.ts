@@ -9,7 +9,6 @@ import {
 import { TEXT_LENGTH } from "../utils/constants";
 import { getDate } from "../utils/getDate";
 import { getPosts } from "../utils/getPosts";
-
 class PostStore {
   formData = { title: "", text: "" };
 
@@ -27,8 +26,6 @@ class PostStore {
   };
 
   isModalOpen: boolean = false;
-
-  isModalForm: boolean = false;
 
   constructor() {
     makeAutoObservable(this);
@@ -61,18 +58,7 @@ class PostStore {
   ) => {
     const { name, value } = event.currentTarget;
 
-    // if (this.isModalOpen === true && this.isModalForm === true) {
-    //   this.formData = { title: "", text: "" };
-    // }
-
     this.formData = { ...this.formData, [name]: value };
-
-    // this.formData = {
-    //   ...this.formData,
-    //   [name]: this.isModalOpen ? value : "",
-    // };
-
-    console.log(this.isModalOpen);
   };
 
   handleFormSubmit(event: React.FormEvent<HTMLFormElement>) {
@@ -119,13 +105,10 @@ class PostStore {
   handleEditButtonClick = (formData: TPost) => {
     this.selectedPost = { ...formData };
     this.isModalOpen = true;
-    this.isModalForm = true;
     this.formData = {
       title: this.isModalOpen ? formData.title : "",
       text: this.isModalOpen ? formData.text : "",
     };
-
-    console.log(this.isModalOpen);
   };
 }
 
