@@ -9,6 +9,7 @@ import "../../index.css";
 import PostStore from "../../store/PostStore";
 import { Container, Feed, PopupBackground } from "./PostsPageStyles";
 import { HEADING, BUTTON_TEXT } from "../../utils/constants";
+import { Theme, lightTheme } from "../../styles/theme";
 
 const PostsPage = observer(() => {
   useEffect(() => {
@@ -16,7 +17,7 @@ const PostsPage = observer(() => {
   }, []);
 
   return (
-    <>
+    <Theme theme={lightTheme}>
       <Container>
         <Heading text={HEADING} />
         <Form
@@ -62,7 +63,7 @@ const PostsPage = observer(() => {
           </Container>
         </PopupBackground>
       )}
-    </>
+    </Theme>
   );
 });
 

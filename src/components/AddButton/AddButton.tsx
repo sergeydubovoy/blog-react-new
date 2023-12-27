@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 import { observer } from "mobx-react";
 import styled from "styled-components";
 

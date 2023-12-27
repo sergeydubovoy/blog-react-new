@@ -1,6 +1,7 @@
 import { observer } from "mobx-react";
 import React from "react";
 import styled from "styled-components";
+import { BUTTON_SYMBOL } from "../../utils/constants";
 
 const SEditButton = styled.button`
   position: absolute;
@@ -29,5 +30,7 @@ export type TEditButtonProps = {
 };
 
 export const EditButton = observer(({ editButton }: TEditButtonProps) => {
-  return <SEditButton onClick={editButton.onClick}>✎</SEditButton>;
+  return (
+    <SEditButton onClick={editButton.onClick}>{BUTTON_SYMBOL.edit}</SEditButton>
+  );
 });

@@ -1,4 +1,5 @@
 export const HEADING: string = "МОЙ БЛОГ";
+
 export const TEXT_LENGTH: {
   titleMax: number;
   textMax: number;
@@ -29,4 +30,9 @@ export const BUTTON_TEXT: { publish: string; save: string } = {
 export const PLACEHOLDERS: { title: string; text: string } = {
   title: "Напишите заголовок поста",
   text: "Напишите текст поста",
+};
+
+export const BUTTON_SYMBOL: { delete: string; edit: string } = {
+  delete: "\u2715",
+  edit: "\u270E",
 };

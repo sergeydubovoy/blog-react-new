@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { BUTTON_SYMBOL } from "../../utils/constants";
 
 const SDeleteButton = styled.button`
   position: absolute;
@@ -26,5 +27,9 @@ export type TDeleteButtonProps = {
 };
 
 export const DeleteButton = ({ deleteButton }: TDeleteButtonProps) => {
-  return <SDeleteButton onClick={deleteButton.onClick}>✕</SDeleteButton>;
+  return (
+    <SDeleteButton onClick={deleteButton.onClick}>
+      {BUTTON_SYMBOL.delete}
+    </SDeleteButton>
+  );
 };

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { lightTheme } from "../../styles/theme";
 
 interface SFormProps {
   isModalForm: boolean;
@@ -15,5 +16,5 @@ export const SForm = styled.form<SFormProps>`
   gap: 20px;
   border: 1px solid #e0e0e0;
   border-radius: 20px;
-  background: #fff;
+  background: ${lightTheme.backgroundColors.form};
 `;

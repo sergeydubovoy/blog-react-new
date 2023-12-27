@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { lightTheme } from "../../styles/theme";
 
 export const Container = styled.div`
   margin: 0 auto;
@@ -25,5 +26,5 @@ export const PopupBackground = styled.div`
   height: 100vh;
   top: 0px;
   bottom: 0px;
-  background: rgba(0, 0, 0, 0.5);
+  background: ${lightTheme.backgroundColors.popup};
 `;
