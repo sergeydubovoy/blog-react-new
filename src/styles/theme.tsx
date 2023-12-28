@@ -1,57 +1,69 @@
 import { ReactNode } from "react";
-import { ThemeProvider } from "styled-components";
+import { ThemeProvider, createGlobalStyle } from "styled-components";
+// import PostStore from "../store/PostStore";
 
 export type TThemeProps = {
   children: ReactNode;
   theme: {
     textColors: {
-      textHeading: string;
-      textTitle: string;
-      textDescription: string;
-      textDate: string;
+      heading: string;
+      title: string;
+      description: string;
+      date: string;
     };
     backgroundColors: {
-      postWrapper: string;
+      post: string;
       popup: string;
       form: string;
+      body: string;
     };
   };
 };
 
 export const lightTheme = {
   textColors: {
-    textHeading: "#304ffe",
-    textTitle: "black",
-    textDescription: "black",
-    textDate: "#304ffe",
+    heading: "#304ffe",
+    title: "black",
+    description: "black",
+    date: "#304ffe",
   },
   backgroundColors: {
-    postWrapper: "white",
+    post: "white",
     popup: "rgba(0, 0, 0, 0.5)",
     form: "white",
+    body: "#f5f5f5",
   },
 };
 
 export const darkTheme = {
   textColors: {
-    textHeading: "yellow",
-    textTitle: "white",
-    textDescription: "white",
-    textDate: "#8497ff",
+    heading: "yellow",
+    title: "white",
+    description: "white",
+    date: "#8497ff",
   },
   backgroundColors: {
-    postWrapper: "#333333",
+    post: "#333333",
     popup: "rgba(0, 0, 0, 0.5)",
     form: "#333333",
+    body: "#333333",
   },
 };
 
-// const GlobalStyle = createGlobalStyle`
-//   body: {
-//     background: #f5f5f5;
-//     }
-// `;
+const GlobalStyle = createGlobalStyle`
+  body {
+    background: ${(props) => props.theme.backgroundColors.body};
+    font-family: "Nunito Sans", sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+  }
+`;
 
 export const Theme = ({ children, theme }: TThemeProps) => {
-  return <ThemeProvider theme={theme}>{children}</ThemeProvider>;
+  return (
+    <ThemeProvider theme={theme}>
+      <GlobalStyle />
+      {children}
+    </ThemeProvider>
+  );
 };

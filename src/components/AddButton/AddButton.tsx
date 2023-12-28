@@ -6,7 +6,7 @@ export const SAddButton = styled.button`
   height: 60px;
   width: 100%;
   border: none;
-  border-radius: 20px;
+  border-radius: 9px;
   background-color: #304ffe;
   color: white;
   font-size: 16px;

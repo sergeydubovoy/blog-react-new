@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { lightTheme } from "../../styles/theme";
 
 export const PostWrapper = styled.div`
   padding: 20px;
@@ -11,7 +10,7 @@ export const PostWrapper = styled.div`
   gap: 10px;
   border: 1px solid #e0e0e0;
   border-radius: 20px;
-  background: ${lightTheme.backgroundColors.postWrapper};
+  background: ${(props) => props.theme.backgroundColors.post};
 `;
 
 export const PostTitle = styled.h2`
@@ -20,18 +19,18 @@ export const PostTitle = styled.h2`
   font-size: 20px;
   line-height: 24px;
   word-wrap: break-word;
-  color: ${lightTheme.textColors.textTitle};
+  color: ${(props) => props.theme.textColors.title};
 `;
 
 export const PostText = styled.p`
   font-size: 16px;
   line-height: 20px;
   word-wrap: break-word;
-  color: ${lightTheme.textColors.textDescription};
+  color: ${(props) => props.theme.textColors.description};
 `;
 
 export const PostDate = styled.p`
   font-size: 14px;
   line-height: 18px;
-  color: ${lightTheme.textColors.textDate};
+  color: ${(props) => props.theme.textColors.date};
 `;

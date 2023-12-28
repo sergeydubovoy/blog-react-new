@@ -1,24 +1,36 @@
 import { observer } from "mobx-react";
 import { useEffect } from "react";
 import { ErrorGetPosts } from "../../components/Errors/ErrorGetPosts";
+import { Form } from "../../components/Form/Form";
 import { Heading } from "../../components/Heading/Heading";
 import { Loader } from "../../components/Loader/Loader";
-import { Form } from "../../components/Form/Form";
 import { Post } from "../../components/Post/Post";
 import "../../index.css";
 import PostStore from "../../store/PostStore";
+import { Theme, lightTheme, darkTheme } from "../../styles/Theme";
+import { BUTTON_TEXT, HEADING } from "../../utils/constants";
 import { Container, Feed, PopupBackground } from "./PostsPageStyles";
-import { HEADING, BUTTON_TEXT } from "../../utils/constants";
-import { Theme, lightTheme } from "../../styles/theme";
+import ThemeButton from "../../components/ThemeButton/ThemeButton";
 
 const PostsPage = observer(() => {
+  // const themeToggler = () => {
+  //   PostStore.theme === "light" ? "dark" : "light";
+  //   console.log(PostStore.theme);
+  // };
+
+  // useEffect(() => {
+  //   PostStore.themeToggler();
+  // }, []);
+
   useEffect(() => {
     PostStore.fetchPosts();
   }, []);
 
   return (
-    <Theme theme={lightTheme}>
+    <Theme theme={PostStore.theme === "light" ? darkTheme : lightTheme}>
       <Container>
+        <ThemeButton />
+        {/* <ThemeButton onClick={() => PostStore.themeToggler()} /> */}
         <Heading text={HEADING} />
         <Form
           form={{

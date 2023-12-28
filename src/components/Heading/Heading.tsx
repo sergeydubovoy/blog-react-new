@@ -1,6 +1,5 @@
-// import React from "react";
 import styled from "styled-components";
-import { lightTheme } from "../../styles/theme";
+import { observer } from "mobx-react";
 
 const STitle = styled.h1`
   text-align: center;
@@ -8,7 +7,7 @@ const STitle = styled.h1`
   font-size: 25px;
   line-height: 30px;
   font-weight: 700;
-  color: ${lightTheme.textColors.textHeading};
+  color: ${(props) => props.theme.textColors.heading};
 `;
 
 type THeading = {
@@ -18,4 +17,6 @@ type THeading = {
 // export const Heading: React.FC<THeading> = (THeading) => (
 //   <STitle>{THeading.text}</STitle>
 // );
-export const Heading = ({ text }: THeading) => <STitle>{text}</STitle>;
+export const Heading = observer(({ text }: THeading) => (
+  <STitle>{text}</STitle>
+));

@@ -10,7 +10,9 @@ import { TEXT_LENGTH } from "../utils/constants";
 import { getDate } from "../utils/getDate";
 import { getPosts } from "../utils/getPosts";
 class PostStore {
-  formData = { title: "", text: "" };
+  theme: string = "light";
+
+  formData: { title: string; text: string } = { title: "", text: "" };
 
   isLoading: boolean = true;
 
@@ -109,6 +111,10 @@ class PostStore {
       title: this.isModalOpen ? formData.title : "",
       text: this.isModalOpen ? formData.text : "",
     };
+  };
+
+  themeToggler = () => {
+    this.theme = this.theme === "light" ? "dark" : "light";
   };
 }
 

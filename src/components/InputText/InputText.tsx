@@ -3,11 +3,11 @@ import React from "react";
 import styled from "styled-components";
 
 const TextArea = styled.textarea`
-  padding: 20px;
+  padding: 10px;
   width: 100%;
   min-height: 100px;
   border: 1px solid #e0e0e0;
-  border-radius: 20px;
+  border-radius: 8px;
   font-size: 16px;
   line-height: 20px;
   outline: #304ffe;
