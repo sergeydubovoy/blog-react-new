@@ -1,6 +1,5 @@
 import { ReactNode } from "react";
 import { ThemeProvider, createGlobalStyle } from "styled-components";
-// import PostStore from "../store/PostStore";
 
 export type TThemeProps = {
   children: ReactNode;
@@ -32,6 +31,10 @@ export const lightTheme = {
     popup: "rgba(0, 0, 0, 0.5)",
     form: "white",
     body: "#f5f5f5",
+    addButton: "#3D5AFE",
+    addButtonHover: "#304FFE",
+    deleteIcon: "#3D5AFE",
+    editIcon: "#3D5AFE",
   },
 };
 
@@ -47,6 +50,10 @@ export const darkTheme = {
     popup: "rgba(0, 0, 0, 0.5)",
     form: "#333333",
     body: "#333333",
+    addButton: "#3949AB",
+    addButtonHover: "#3f51b5",
+    deleteIcon: "white",
+    editIcon: "white",
   },
 };
 

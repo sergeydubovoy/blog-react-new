@@ -1,4 +1,3 @@
-/* eslint-disable react-refresh/only-export-components */
 import { observer } from "mobx-react";
 import styled from "styled-components";
 
@@ -7,7 +6,7 @@ export const SAddButton = styled.button`
   width: 100%;
   border: none;
   border-radius: 9px;
-  background-color: #304ffe;
+  background-color: ${(props) => props.theme.backgroundColors.addButton};
   color: white;
   font-size: 16px;
   line-height: 20px;
@@ -22,11 +21,11 @@ export const SAddButton = styled.button`
   cursor: pointer;
 
   &:hover {
-    background-color: #3d5afe;
+    background-color: ${(props) => props.theme.backgroundColors.addButtonHover};
   }
 
   &:disabled {
-    background-color: gray;
+    background-color: #616161;
     cursor: not-allowed;
   }
 `;

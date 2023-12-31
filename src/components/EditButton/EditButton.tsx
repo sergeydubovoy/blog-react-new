@@ -1,12 +1,13 @@
 import { observer } from "mobx-react";
 import React from "react";
 import styled from "styled-components";
-import { BUTTON_SYMBOL } from "../../utils/constants";
+import { EditIcon } from "../Icons/EditIcon/EditIcon";
 
 const SEditButton = styled.button`
   position: absolute;
+  padding: 0;
   top: 30px;
-  right: -10px;
+  right: 10px;
   width: 20px;
   height: 20px;
   font-size: 18px;
@@ -17,8 +18,6 @@ const SEditButton = styled.button`
   border: none;
   color: #304ffe;
   cursor: pointer;
-  transform: scaleX(-1);
-  transform-origin: left;
 `;
 
 export type TEditButton = {
@@ -31,6 +30,8 @@ export type TEditButtonProps = {
 
 export const EditButton = observer(({ editButton }: TEditButtonProps) => {
   return (
-    <SEditButton onClick={editButton.onClick}>{BUTTON_SYMBOL.edit}</SEditButton>
+    <SEditButton onClick={editButton.onClick}>
+      <EditIcon stroke={"#304ffe"} />
+    </SEditButton>
   );
 });

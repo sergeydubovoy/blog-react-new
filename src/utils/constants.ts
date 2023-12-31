@@ -32,7 +32,7 @@ export const PLACEHOLDERS: { title: string; text: string } = {
   text: "Напишите текст поста",
 };
 
-export const BUTTON_SYMBOL: { delete: string; edit: string } = {
-  delete: "\u2715",
-  edit: "\u270E",
-};
+// export const BUTTON_SYMBOL: { delete: string; edit: string } = {
+//   delete: "\u2715",
+//   edit: "\u270E",
+// };

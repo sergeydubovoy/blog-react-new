@@ -13,15 +13,6 @@ import { Container, Feed, PopupBackground } from "./PostsPageStyles";
 import ThemeButton from "../../components/ThemeButton/ThemeButton";
 
 const PostsPage = observer(() => {
-  // const themeToggler = () => {
-  //   PostStore.theme === "light" ? "dark" : "light";
-  //   console.log(PostStore.theme);
-  // };
-
-  // useEffect(() => {
-  //   PostStore.themeToggler();
-  // }, []);
-
   useEffect(() => {
     PostStore.fetchPosts();
   }, []);
@@ -30,7 +21,6 @@ const PostsPage = observer(() => {
     <Theme theme={PostStore.theme === "light" ? darkTheme : lightTheme}>
       <Container>
         <ThemeButton />
-        {/* <ThemeButton onClick={() => PostStore.themeToggler()} /> */}
         <Heading text={HEADING} />
         <Form
           form={{

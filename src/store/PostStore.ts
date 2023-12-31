@@ -10,23 +10,17 @@ import { TEXT_LENGTH } from "../utils/constants";
 import { getDate } from "../utils/getDate";
 import { getPosts } from "../utils/getPosts";
 class PostStore {
-  theme: string = "light";
-
+  theme: string = "dark";
   formData: { title: string; text: string } = { title: "", text: "" };
-
   isLoading: boolean = true;
-
   isErrorGetPosts: boolean = false;
-
   posts: TPost[] = [];
-
   selectedPost: TPost = {
     id: "",
     title: "",
     date: "",
     text: "",
   };
-
   isModalOpen: boolean = false;
 
   constructor() {
@@ -115,7 +109,23 @@ class PostStore {
 
   themeToggler = () => {
     this.theme = this.theme === "light" ? "dark" : "light";
+    this.saveThemeToLocalStorage();
   };
+
+  saveThemeToLocalStorage() {
+    localStorage.setItem("theme", this.theme);
+  }
+
+  loadThemeFromLocalStorage() {
+    const savedTheme = localStorage.getItem("theme");
+
+    if (savedTheme) {
+      this.theme = savedTheme;
+    }
+  }
 }
 
-export default new PostStore();
+// export default new PostStore();
+const store = new PostStore();
+store.loadThemeFromLocalStorage();
+export default store;

@@ -29,6 +29,7 @@ export const Post: React.FC<TPostProps> = observer(({ post, functions }) => {
       <PostText>{post.text ? post.text : "Нет текста"}</PostText>
       <DeleteButton
         deleteButton={{
+          stroke: "#304ffe",
           onClick: () => functions.handleDelete(post.id),
         }}
       />
