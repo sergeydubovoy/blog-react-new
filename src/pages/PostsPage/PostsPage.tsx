@@ -24,7 +24,7 @@ const PostsPage = observer(() => {
         <Heading text={HEADING} />
         <Form
           form={{
-            textButton: BUTTON_TEXT.save,
+            textButton: BUTTON_TEXT.publish,
             onClick: () => PostStore.handleAddButtonClick,
             isModalForm: false,
           }}
