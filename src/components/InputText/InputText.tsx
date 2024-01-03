@@ -6,21 +6,27 @@ const TextArea = styled.textarea`
   padding: 10px;
   width: 100%;
   min-height: 100px;
-  border: 1px solid #e0e0e0;
+  border: 1px solid ${(props) => props.theme.borderColors.inputs};
   border-radius: 8px;
   font-size: 16px;
   line-height: 20px;
   outline: #304ffe;
   box-sizing: border-box;
   transition: border 0.3s ease;
+  color: ${(props) => props.theme.textColors.inputs};
+  background: ${(props) => props.theme.backgroundColors.inputs};
 
   &:hover {
-    border: 1px solid #304ffe;
+    border: 1px solid ${(props) => props.theme.hoverColors.inputs};
   }
 
   &:focus {
     outline: none;
-    border: 1px solid #304ffe;
+    border: 1px solid ${(props) => props.theme.focusColors.inputs};
+  }
+
+  &::placeholder {
+    color: ${(props) => props.theme.textColors.placeholders};
   }
 `;
 

@@ -9,51 +9,85 @@ export type TThemeProps = {
       title: string;
       description: string;
       date: string;
+      placeholders: string;
     };
     backgroundColors: {
       post: string;
       popup: string;
       form: string;
       body: string;
+      addButton: string;
+      addButtonHover: string;
+      deleteIcon: string;
+      editIcon: string;
+      inputs: string;
     };
   };
 };
 
 export const lightTheme = {
   textColors: {
-    heading: "#304ffe",
+    heading: "#3375f6",
     title: "black",
     description: "black",
-    date: "#304ffe",
+    date: "#517ab5",
+    placeholders: "#b1b1b1",
+    inputs: "#000000",
   },
   backgroundColors: {
     post: "white",
     popup: "rgba(0, 0, 0, 0.5)",
-    form: "white",
-    body: "#f5f5f5",
-    addButton: "#3D5AFE",
+    form: "#ffffff",
+    body: "#edeef0",
+    addButton: "#3375f6",
     addButtonHover: "#304FFE",
-    deleteIcon: "#3D5AFE",
-    editIcon: "#3D5AFE",
+    deleteIcon: "#517ab5",
+    editIcon: "#517ab5",
+    inputs: "white",
+  },
+  borderColors: {
+    post: "#dfe3e6",
+    form: "#dfe3e6",
+    inputs: "#dfe3e6",
+  },
+  hoverColors: {
+    inputs: "#3375f6",
+  },
+  focusColors: {
+    inputs: "#3375f6",
   },
 };
 
 export const darkTheme = {
   textColors: {
-    heading: "yellow",
+    heading: "#3375f6",
     title: "white",
     description: "white",
-    date: "#8497ff",
+    date: "#7ea8e6",
+    placeholders: "#828282",
+    inputs: "#e1e3e6",
   },
   backgroundColors: {
-    post: "#333333",
+    post: "#222222",
     popup: "rgba(0, 0, 0, 0.5)",
-    form: "#333333",
-    body: "#333333",
+    form: "#222222",
+    body: "#141414",
     addButton: "#3949AB",
     addButtonHover: "#3f51b5",
-    deleteIcon: "white",
-    editIcon: "white",
+    deleteIcon: "#878787",
+    editIcon: "#878787",
+    inputs: "#222222",
+  },
+  borderColors: {
+    post: "#363738",
+    form: "#363738",
+    inputs: "#363738",
+  },
+  hoverColors: {
+    inputs: "#3375f6",
+  },
+  focusColors: {
+    inputs: "#3375f6",
   },
 };
 

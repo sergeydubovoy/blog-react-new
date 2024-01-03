@@ -13,7 +13,7 @@ export const SForm = styled.form<SFormProps>`
   display: flex;
   flex-direction: column;
   gap: 10px;
-  border: 1px solid #e0e0e0;
+  border: 1px solid ${(props) => props.theme.borderColors.form};
   border-radius: 10px;
   background: ${(props) => props.theme.backgroundColors.form};
 `;
