@@ -9,10 +9,10 @@ import "../../index.css";
 import PostStore from "../../store/PostStore";
 import { Theme, lightTheme, darkTheme } from "../../styles/Theme";
 import { BUTTON_TEXT, HEADING } from "../../utils/constants";
-import { Container, Feed, PopupBackground } from "./PostsPageStyles";
+import { Container, Feed, PopupBackground } from "./MainPageStyles";
 import ThemeButton from "../../components/ThemeButton/ThemeButton";
 
-const PostsPage = observer(() => {
+const MainPage = observer(() => {
   useEffect(() => {
     PostStore.fetchPosts();
   }, []);
@@ -69,4 +69,4 @@ const PostsPage = observer(() => {
   );
 });
 
-export default PostsPage;
+export default MainPage;
