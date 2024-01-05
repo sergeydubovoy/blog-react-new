@@ -20,6 +20,7 @@ export type TThemeProps = {
       addButtonHover: string;
       deleteIcon: string;
       editIcon: string;
+      closeIcon: string;
       inputs: string;
     };
   };
@@ -43,6 +44,7 @@ export const lightTheme = {
     addButtonHover: "#304FFE",
     deleteIcon: "#517ab5",
     editIcon: "#517ab5",
+    closeIcon: "#517ab5",
     inputs: "white",
   },
   borderColors: {
@@ -76,6 +78,7 @@ export const darkTheme = {
     addButtonHover: "#3f51b5",
     deleteIcon: "#878787",
     editIcon: "#878787",
+    closeIcon: "#878787",
     inputs: "#222222",
   },
   borderColors: {

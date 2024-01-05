@@ -6,6 +6,7 @@ import { InputText } from "../InputText/InputText";
 import { InputTitle } from "../InputTitle/InputTitle";
 import { SForm } from "./FormStyles";
 import { INPUT_NAME, PLACEHOLDERS } from "../../utils/constants";
+import { CloseButton } from "../CloseButton/CloseButton";
 
 export type TForm = {
   textButton: string;
@@ -64,6 +65,11 @@ export const Form: React.FC<TFormProps> = observer(({ form }) => {
           disabled: PostStore.isInvalidTextLength(),
         }}
       />
+      {PostStore.isModalOpen ? (
+        <CloseButton onClick={PostStore.handleCloseButtonClick} />
+      ) : (
+        ""
+      )}
     </SForm>
   );
 });

@@ -107,6 +107,12 @@ class PostStore {
     };
   };
 
+  handleCloseButtonClick = () => {
+    this.selectedPost = { id: "", title: "", date: "", text: "" };
+    this.formData = { title: "", text: "" };
+    this.isModalOpen = false;
+  };
+
   themeToggler = () => {
     this.theme = this.theme === "light" ? "dark" : "light";
     this.saveThemeToLocalStorage();

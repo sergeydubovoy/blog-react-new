@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { DeleteIcon } from "../Icons/DeleteIcon/DeleteIcon";
+import { observer } from "mobx-react";
 
 const SDeleteButton = styled.button`
   position: absolute;
@@ -26,10 +27,10 @@ export type TDeleteButtonProps = {
   deleteButton: TDeleteButton;
 };
 
-export const DeleteButton = ({ deleteButton }: TDeleteButtonProps) => {
+export const DeleteButton = observer(({ deleteButton }: TDeleteButtonProps) => {
   return (
     <SDeleteButton onClick={deleteButton.onClick}>
       <DeleteIcon stroke={"#304ffe"} />
     </SDeleteButton>
   );
-};
+});
