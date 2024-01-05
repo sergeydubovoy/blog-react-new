@@ -7,7 +7,7 @@ const SEditButton = styled.button`
   position: absolute;
   padding: 0;
   top: 30px;
-  right: 10px;
+  right: 5px;
   width: 20px;
   height: 20px;
   font-size: 18px;

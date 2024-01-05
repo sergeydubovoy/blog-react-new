@@ -7,7 +7,7 @@ const SDeleteButton = styled.button`
   position: absolute;
   padding: 0;
   top: 10px;
-  right: 10px;
+  right: 5px;
   width: 20px;
   height: 20px;
   display: flex;

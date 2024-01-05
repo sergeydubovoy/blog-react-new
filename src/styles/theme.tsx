@@ -45,6 +45,7 @@ export const lightTheme = {
     deleteIcon: "#517ab5",
     editIcon: "#517ab5",
     closeIcon: "#517ab5",
+    closeIconFill: "white",
     inputs: "white",
   },
   borderColors: {
@@ -79,6 +80,7 @@ export const darkTheme = {
     deleteIcon: "#878787",
     editIcon: "#878787",
     closeIcon: "#878787",
+    closeIconFill: "#8787872a",
     inputs: "#222222",
   },
   borderColors: {

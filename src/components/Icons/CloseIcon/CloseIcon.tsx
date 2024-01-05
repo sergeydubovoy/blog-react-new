@@ -4,6 +4,7 @@ import styled, { ThemeContext } from "styled-components";
 
 export type TCloseIcon = {
   stroke: string;
+  fill: string;
 };
 
 const SCloseIcon = styled.svg`
@@ -11,14 +12,14 @@ const SCloseIcon = styled.svg`
   height: 100%;
 `;
 
-export const CloseIcon = observer(({ stroke }: TCloseIcon) => {
+export const CloseIcon = observer(({ stroke, fill }: TCloseIcon) => {
   const theme = useContext(ThemeContext);
   return (
     <SCloseIcon
       width="800px"
       height="800px"
       viewBox="0 0 24 24"
-      fill="white"
+      fill={theme ? theme.backgroundColors.closeIconFill : fill}
       xmlns="http://www.w3.org/2000/svg"
     >
       <circle

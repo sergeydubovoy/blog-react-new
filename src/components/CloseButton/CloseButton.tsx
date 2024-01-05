@@ -25,7 +25,7 @@ export type TCloseButton = {
 export const CloseButton = observer(({ onClick }: TCloseButton) => {
   return (
     <SCloseButton onClick={onClick}>
-      <CloseIcon stroke={"#304ffe"} />
+      <CloseIcon stroke={"#304ffe"} fill={"white"} />
     </SCloseButton>
   );
 });

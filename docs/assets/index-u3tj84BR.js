@@ -1987,7 +1987,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 `,p4=Ae.svg`
   width: 100%;
   height: 100%;
-`,m4=kt(({stroke:e})=>{const t=ye.useContext(Vr);return M.jsxs(p4,{width:"800px",height:"800px",viewBox:"0 0 24 24",fill:"white",xmlns:"http://www.w3.org/2000/svg",children:[M.jsx("circle",{cx:"12",cy:"12",r:"10",stroke:t?t.backgroundColors.closeIcon:e,strokeWidth:"1.5"}),M.jsx("path",{d:"M14.5 9.50002L9.5 14.5M9.49998 9.5L14.5 14.5",stroke:t?t.backgroundColors.closeIcon:e,strokeWidth:"1.5",strokeLinecap:"round"})]})}),g4=Ae.button`
+`,m4=kt(({stroke:e,fill:t})=>{const n=ye.useContext(Vr);return M.jsxs(p4,{width:"800px",height:"800px",viewBox:"0 0 24 24",fill:n?n.backgroundColors.closeIconFill:t,xmlns:"http://www.w3.org/2000/svg",children:[M.jsx("circle",{cx:"12",cy:"12",r:"10",stroke:n?n.backgroundColors.closeIcon:e,strokeWidth:"1.5"}),M.jsx("path",{d:"M14.5 9.50002L9.5 14.5M9.49998 9.5L14.5 14.5",stroke:n?n.backgroundColors.closeIcon:e,strokeWidth:"1.5",strokeLinecap:"round"})]})}),g4=Ae.button`
   position: absolute;
   padding: 0;
   top: 0px;
@@ -2000,7 +2000,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
   background: none;
   border: none;
   cursor: pointer;
-`,y4=kt(({onClick:e})=>M.jsx(g4,{onClick:e,children:M.jsx(m4,{stroke:"#304ffe"})})),D_=kt(({form:e})=>{const t=e.isModalForm;let n="",r="";return t?(n=ee.isModalOpen?ee.formData.title:"",r=ee.isModalOpen?ee.formData.text:""):t||(n=ee.isModalOpen?"":ee.formData.title,r=ee.isModalOpen?"":ee.formData.text),M.jsxs(d4,{onSubmit:ee.handleFormSubmit,isModalForm:e.isModalForm,children:[M.jsx(f4,{input:{placeholder:A_.title,onInput:ee.handleInputChange,value:n,name:S_.titleNameForm,type:"text"}}),M.jsx(c4,{textarea:{placeholder:A_.text,onInput:ee.handleInputChange,value:r,name:S_.textNameForm}}),M.jsx(u4,{button:{textButton:e.textButton,onClick:()=>ee.isModalOpen?ee.handleUpdatePost(ee.selectedPost):ee.handleAddButtonClick(),disabled:ee.isInvalidTextLength()}}),ee.isModalOpen?M.jsx(y4,{onClick:ee.handleCloseButtonClick}):""]})}),v4=Ae.h1`
+`,y4=kt(({onClick:e})=>M.jsx(g4,{onClick:e,children:M.jsx(m4,{stroke:"#304ffe",fill:"white"})})),D_=kt(({form:e})=>{const t=e.isModalForm;let n="",r="";return t?(n=ee.isModalOpen?ee.formData.title:"",r=ee.isModalOpen?ee.formData.text:""):t||(n=ee.isModalOpen?"":ee.formData.title,r=ee.isModalOpen?"":ee.formData.text),M.jsxs(d4,{onSubmit:ee.handleFormSubmit,isModalForm:e.isModalForm,children:[M.jsx(f4,{input:{placeholder:A_.title,onInput:ee.handleInputChange,value:n,name:S_.titleNameForm,type:"text"}}),M.jsx(c4,{textarea:{placeholder:A_.text,onInput:ee.handleInputChange,value:r,name:S_.textNameForm}}),M.jsx(u4,{button:{textButton:e.textButton,onClick:()=>ee.isModalOpen?ee.handleUpdatePost(ee.selectedPost):ee.handleAddButtonClick(),disabled:ee.isInvalidTextLength()}}),ee.isModalOpen?M.jsx(y4,{onClick:ee.handleCloseButtonClick}):""]})}),v4=Ae.h1`
   text-align: center;
   text-transform: uppercase;
   font-size: 25px;
@@ -2068,7 +2068,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
   position: absolute;
   padding: 0;
   top: 10px;
-  right: 10px;
+  right: 5px;
   width: 20px;
   height: 20px;
   display: flex;
@@ -2084,7 +2084,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
   position: absolute;
   padding: 0;
   top: 30px;
-  right: 10px;
+  right: 5px;
   width: 20px;
   height: 20px;
   font-size: 18px;
@@ -2122,7 +2122,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
   font-size: 14px;
   line-height: 18px;
   color: ${e=>e.theme.textColors.date};
-`,V4=kt(({post:e,functions:t})=>M.jsxs(O4,{id:e.id,children:[M.jsx(D4,{children:e.title?e.title:"Нет заголовка"}),M.jsx(N4,{children:e.date?e.date:"Нет даты"}),M.jsx(b4,{children:e.text?e.text:"Нет текста"}),M.jsx(C4,{deleteButton:{stroke:"#304ffe",onClick:()=>t.handleDelete(e.id)}}),M.jsx(x4,{editButton:{onClick:()=>t.handleEdit(e.id,e.title,e.text)}})]})),M4={textColors:{heading:"#3375f6",title:"black",description:"black",date:"#517ab5",placeholders:"#b1b1b1",inputs:"#000000"},backgroundColors:{post:"white",popup:"rgba(0, 0, 0, 0.5)",form:"#ffffff",body:"#edeef0",addButton:"#3375f6",addButtonHover:"#304FFE",deleteIcon:"#517ab5",editIcon:"#517ab5",closeIcon:"#517ab5",inputs:"white"},borderColors:{post:"#dfe3e6",form:"#dfe3e6",inputs:"#dfe3e6"},hoverColors:{inputs:"#3375f6"},focusColors:{inputs:"#3375f6"}},$4={textColors:{heading:"#3375f6",title:"white",description:"white",date:"#7ea8e6",placeholders:"#828282",inputs:"#e1e3e6"},backgroundColors:{post:"#222222",popup:"rgba(0, 0, 0, 0.5)",form:"#222222",body:"#141414",addButton:"#3949AB",addButtonHover:"#3f51b5",deleteIcon:"#878787",editIcon:"#878787",closeIcon:"#878787",inputs:"#222222"},borderColors:{post:"#363738",form:"#363738",inputs:"#363738"},hoverColors:{inputs:"#3375f6"},focusColors:{inputs:"#3375f6"}},L4=Wk`
+`,V4=kt(({post:e,functions:t})=>M.jsxs(O4,{id:e.id,children:[M.jsx(D4,{children:e.title?e.title:"Нет заголовка"}),M.jsx(N4,{children:e.date?e.date:"Нет даты"}),M.jsx(b4,{children:e.text?e.text:"Нет текста"}),M.jsx(C4,{deleteButton:{stroke:"#304ffe",onClick:()=>t.handleDelete(e.id)}}),M.jsx(x4,{editButton:{onClick:()=>t.handleEdit(e.id,e.title,e.text)}})]})),M4={textColors:{heading:"#3375f6",title:"black",description:"black",date:"#517ab5",placeholders:"#b1b1b1",inputs:"#000000"},backgroundColors:{post:"white",popup:"rgba(0, 0, 0, 0.5)",form:"#ffffff",body:"#edeef0",addButton:"#3375f6",addButtonHover:"#304FFE",deleteIcon:"#517ab5",editIcon:"#517ab5",closeIcon:"#517ab5",closeIconFill:"white",inputs:"white"},borderColors:{post:"#dfe3e6",form:"#dfe3e6",inputs:"#dfe3e6"},hoverColors:{inputs:"#3375f6"},focusColors:{inputs:"#3375f6"}},$4={textColors:{heading:"#3375f6",title:"white",description:"white",date:"#7ea8e6",placeholders:"#828282",inputs:"#e1e3e6"},backgroundColors:{post:"#222222",popup:"rgba(0, 0, 0, 0.5)",form:"#222222",body:"#141414",addButton:"#3949AB",addButtonHover:"#3f51b5",deleteIcon:"#878787",editIcon:"#878787",closeIcon:"#878787",closeIconFill:"#8787872a",inputs:"#222222"},borderColors:{post:"#363738",form:"#363738",inputs:"#363738"},hoverColors:{inputs:"#3375f6"},focusColors:{inputs:"#3375f6"}},L4=Wk`
   body {
     background: ${e=>e.theme.backgroundColors.body};
     font-family: "Nunito Sans", sans-serif;
