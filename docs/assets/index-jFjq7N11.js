@@ -2242,4 +2242,4 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
   margin: 20px 0;
   height: 30px;
   width: 100vw;
-`,Y2=()=>P.jsxs(P.Fragment,{children:[P.jsxs(Q2,{children:[P.jsx(q2,{text:Q4}),P.jsx(K2,{})]}),P.jsx(uP,{})]});function X2(){return P.jsx(P.Fragment,{children:P.jsx(hP,{children:P.jsxs(fu,{path:"/",element:P.jsx(Y2,{}),children:[P.jsx(fu,{index:!0,element:P.jsx(b2,{})}),P.jsx(fu,{path:"posts/:postId",element:P.jsx(z2,{})})]})})})}const J2=Uf.createRoot(document.getElementById("root"));J2.render(P.jsx(vP,{children:P.jsx(X2,{})}));
+`,Y2=()=>P.jsxs(P.Fragment,{children:[P.jsxs(Q2,{children:[P.jsx(q2,{text:Q4}),P.jsx(K2,{})]}),P.jsx(uP,{})]});function X2(){return P.jsx(P.Fragment,{children:P.jsx(hP,{children:P.jsxs(fu,{path:"/blog-react-new/",element:P.jsx(Y2,{}),children:[P.jsx(fu,{index:!0,element:P.jsx(b2,{})}),P.jsx(fu,{path:"posts/:postId",element:P.jsx(z2,{})})]})})})}const J2=Uf.createRoot(document.getElementById("root"));J2.render(P.jsx(vP,{children:P.jsx(X2,{})}));

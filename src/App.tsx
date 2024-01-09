@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<Layout />}>
+        <Route path="/blog-react-new/" element={<Layout />}>
           <Route index element={<MainPage />} />
           <Route path="posts/:postId" element={<PostPage />} />
         </Route>
