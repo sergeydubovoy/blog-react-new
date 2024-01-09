@@ -17,6 +17,7 @@ export type TThemeProps = {
       form: string;
       body: string;
       addButton: string;
+      backButton: string;
       deleteIcon: string;
       editIcon: string;
       closeIcon: string;
@@ -31,6 +32,7 @@ export type TThemeProps = {
     hoverColors: {
       inputs: string;
       addButtonHover: string;
+      backButton: string;
     };
     focusColors: {
       inputs: string;
@@ -53,6 +55,7 @@ export const lightTheme = {
     form: "#ffffff",
     body: "#edeef0",
     addButton: "#3375f6",
+    backButton: "rgba(0, 0, 0, 0)",
     deleteIcon: "#517ab5",
     editIcon: "#517ab5",
     closeIcon: "#517ab5",
@@ -68,6 +71,7 @@ export const lightTheme = {
   hoverColors: {
     inputs: "#878787",
     addButtonHover: "#304FFE",
+    backButton: "rgba(0, 0, 0, 0.1)",
   },
   focusColors: {
     inputs: "#3375f6",
@@ -89,6 +93,7 @@ export const darkTheme = {
     form: "#222222",
     body: "#141414",
     addButton: "#3949AB",
+    backButton: "rgba(255, 255, 255, 0)",
     deleteIcon: "#878787",
     editIcon: "#878787",
     closeIcon: "#878787",
@@ -104,6 +109,7 @@ export const darkTheme = {
   hoverColors: {
     inputs: "#878787",
     addButtonHover: "#3f51b5",
+    backButton: "rgba(255, 255, 255, 0.1)",
   },
   focusColors: {
     inputs: "#3375f6",

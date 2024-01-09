@@ -10,19 +10,27 @@ const SBackButton = styled.div`
   padding-top: 20px;
   align-items: flex-start;
   gap: 10px;
-  width: 100px;
+  width: 130px;
   height: 100vh;
-  background: rgba(255, 255, 255, 0);
+  background: ${(props) => props.theme.backgroundColors.backButton};
   cursor: pointer;
   transition: all 0.3s ease;
 
   &:hover {
-    background: rgba(255, 255, 255, 0.2);
+    background: ${(props) => props.theme.hoverColors.backButton};
   }
 `;
 
+const SBackButtonInner = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+`;
+
 const SBackText = styled.p`
-  line-height: 1.5;
+  font-size: 16px;
+  line-height: 16px;
   font-weight: 400;
   color: #828282;
 `;
@@ -31,8 +39,10 @@ export const BackButton = observer(() => {
   const theme = PostStore.theme === "light" ? darkTheme : lightTheme;
   return (
     <SBackButton>
-      <BackIcon fill={theme.backgroundColors.backIcon} />
-      <SBackText>Назад</SBackText>
+      <SBackButtonInner>
+        <BackIcon fill={theme.backgroundColors.backIcon} />
+        <SBackText>Назад</SBackText>
+      </SBackButtonInner>
     </SBackButton>
   );
 });
