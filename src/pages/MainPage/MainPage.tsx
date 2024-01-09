@@ -34,7 +34,7 @@ export const MainPage = observer(() => {
           ) : (
             PostStore.posts.map((post) => (
               <Post
-                to={`/posts/${post.id}`}
+                to={`/blog-react-new/posts/${post.id}`}
                 key={post.id}
                 post={{
                   id: post.id,

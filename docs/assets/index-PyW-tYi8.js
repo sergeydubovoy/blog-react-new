@@ -2182,7 +2182,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
   bottom: 0px;
   background: ${e=>e.theme.backgroundColors.popup};
   backdrop-filter: blur(5px) brightness(0.7);
-`,b2=ot(()=>{x.useEffect(()=>{K.fetchPosts()},[]);const e=K.theme==="light"?zi:Ui;return P.jsxs($A,{theme:e,children:[P.jsxs(Lp,{children:[P.jsx(c0,{form:{textButton:t0.publish,onClick:()=>K.handleAddButtonClick,isModalForm:!1}}),P.jsxs(k2,{children:[K.isLoading&&P.jsx(_2,{}),K.isErrorGetPosts?P.jsx(aS,{}):K.posts.map(t=>P.jsx(x2,{to:`/posts/${t.id}`,post:{id:t.id,title:t.title,date:t.date,text:t.text},functions:{handleDelete:()=>K.handleDeleteButtonClick(t),handleEdit:()=>K.handleEditButtonClick(t)}},t.id))]})]}),K.isModalOpen&&P.jsx(O2,{children:P.jsx(Lp,{children:P.jsx(c0,{form:{textButton:t0.save,onClick:()=>K.handleUpdatePost,isModalForm:!0}})})})]})}),D2=te.svg`
+`,b2=ot(()=>{x.useEffect(()=>{K.fetchPosts()},[]);const e=K.theme==="light"?zi:Ui;return P.jsxs($A,{theme:e,children:[P.jsxs(Lp,{children:[P.jsx(c0,{form:{textButton:t0.publish,onClick:()=>K.handleAddButtonClick,isModalForm:!1}}),P.jsxs(k2,{children:[K.isLoading&&P.jsx(_2,{}),K.isErrorGetPosts?P.jsx(aS,{}):K.posts.map(t=>P.jsx(x2,{to:`/blog-react-new/posts/${t.id}`,post:{id:t.id,title:t.title,date:t.date,text:t.text},functions:{handleDelete:()=>K.handleDeleteButtonClick(t),handleEdit:()=>K.handleEditButtonClick(t)}},t.id))]})]}),K.isModalOpen&&P.jsx(O2,{children:P.jsx(Lp,{children:P.jsx(c0,{form:{textButton:t0.save,onClick:()=>K.handleUpdatePost,isModalForm:!0}})})})]})}),D2=te.svg`
   width: 18px;
   height: 18px;
 `,N2=ot(({fill:e})=>P.jsx(D2,{fill:e,xmlns:"http://www.w3.org/2000/svg",width:"800px",height:"800px",viewBox:"0 0 42 42",children:P.jsx("polygon",{points:"31,38.32 13.391,21 31,3.68 28.279,1 8,21.01 28.279,41 "})})),V2=te.div`
@@ -2242,4 +2242,4 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
   margin: 20px 0;
   height: 30px;
   width: 100vw;
-`,Y2=()=>P.jsxs(P.Fragment,{children:[P.jsxs(Q2,{children:[P.jsx(q2,{text:Q4}),P.jsx(K2,{})]}),P.jsx(uP,{})]});function X2(){return P.jsx(P.Fragment,{children:P.jsx(hP,{children:P.jsxs(fu,{path:"/blog-react-new/",element:P.jsx(Y2,{}),children:[P.jsx(fu,{index:!0,element:P.jsx(b2,{})}),P.jsx(fu,{path:"posts/:postId",element:P.jsx(z2,{})})]})})})}const J2=Uf.createRoot(document.getElementById("root"));J2.render(P.jsx(vP,{children:P.jsx(X2,{})}));
+`,Y2=()=>P.jsxs(P.Fragment,{children:[P.jsxs(Q2,{children:[P.jsx(q2,{text:Q4}),P.jsx(K2,{})]}),P.jsx(uP,{})]});function X2(){return P.jsx(P.Fragment,{children:P.jsx(hP,{children:P.jsxs(fu,{path:"/blog-react-new/",element:P.jsx(Y2,{}),children:[P.jsx(fu,{index:!0,element:P.jsx(b2,{})}),P.jsx(fu,{path:"/blog-react-new/posts/:postId",element:P.jsx(z2,{})})]})})})}const J2=Uf.createRoot(document.getElementById("root"));J2.render(P.jsx(vP,{children:P.jsx(X2,{})}));
