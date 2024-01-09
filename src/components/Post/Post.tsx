@@ -1,8 +1,9 @@
 import React from "react";
 import { DeleteButton } from "../DeleteButton/DeleteButton";
 import { EditButton } from "../EditButton/EditButton";
-import { PostDate, PostText, PostTitle, PostWrapper } from "./PostStyles";
+import { SPostDate, SPostText, SPostTitle, SPostWrapper } from "./PostStyles";
 import { observer } from "mobx-react";
+import { Link } from "react-router-dom";
 
 export type TPost = {
   id: string;
@@ -19,25 +20,30 @@ export type TPostFunctions = {
 export type TPostProps = {
   post: TPost;
   functions: TPostFunctions;
+  to: string;
 };
 
-export const Post: React.FC<TPostProps> = observer(({ post, functions }) => {
-  return (
-    <PostWrapper id={post.id}>
-      <PostTitle>{post.title ? post.title : "Нет заголовка"}</PostTitle>
-      <PostDate>{post.date ? post.date : "Нет даты"}</PostDate>
-      <PostText>{post.text ? post.text : "Нет текста"}</PostText>
-      <DeleteButton
-        deleteButton={{
-          stroke: "#304ffe",
-          onClick: () => functions.handleDelete(post.id),
-        }}
-      />
-      <EditButton
-        editButton={{
-          onClick: () => functions.handleEdit(post.id, post.title, post.text),
-        }}
-      />
-    </PostWrapper>
-  );
-});
+export const Post: React.FC<TPostProps> = observer(
+  ({ post, functions, to }) => {
+    return (
+      <SPostWrapper id={post.id}>
+        <Link style={{ textDecoration: "none" }} to={to}>
+          <SPostTitle>{post.title ? post.title : "Нет заголовка"}</SPostTitle>
+        </Link>
+        <SPostDate>{post.date ? post.date : "Нет даты"}</SPostDate>
+        <SPostText>{post.text ? post.text : "Нет текста"}</SPostText>
+        <DeleteButton
+          deleteButton={{
+            stroke: "#304ffe",
+            onClick: () => functions.handleDelete(post.id),
+          }}
+        />
+        <EditButton
+          editButton={{
+            onClick: () => functions.handleEdit(post.id, post.title, post.text),
+          }}
+        />
+      </SPostWrapper>
+    );
+  }
+);

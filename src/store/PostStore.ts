@@ -131,7 +131,6 @@ class PostStore {
   }
 }
 
-// export default new PostStore();
 const store = new PostStore();
 store.loadThemeFromLocalStorage();
 export default store;

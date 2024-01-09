@@ -1,12 +1,17 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+export const SContainer = styled.div`
   margin: 0 auto;
-  padding: 20px 0;
+  padding: 0 20px;
   width: 400px;
   display: flex;
   flex-direction: column;
   gap: 30px;
+
+  @media (max-width: 430px) {
+    width: 100%;
+    padding: 0 15px;
+  }
 `;
 
 export const Feed = styled.div`

@@ -1,5 +1,4 @@
-import { useContext } from "react";
-import styled, { ThemeContext } from "styled-components";
+import styled from "styled-components";
 
 type TEditIcon = {
   stroke: string;
@@ -11,7 +10,6 @@ const SEditIcon = styled.svg`
 `;
 
 export const EditIcon = ({ stroke }: TEditIcon) => {
-  const theme = useContext(ThemeContext);
   return (
     <SEditIcon
       width="30px"
@@ -22,7 +20,7 @@ export const EditIcon = ({ stroke }: TEditIcon) => {
       <path
         d="M20,16v4a2,2,0,0,1-2,2H4a2,2,0,0,1-2-2V6A2,2,0,0,1,4,4H8"
         fill="none"
-        stroke={theme ? theme.backgroundColors.editIcon : stroke}
+        stroke={stroke}
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="2"
@@ -30,7 +28,7 @@ export const EditIcon = ({ stroke }: TEditIcon) => {
       <polygon
         fill="none"
         points="12.5 15.8 22 6.2 17.8 2 8.3 11.5 8 16 12.5 15.8"
-        stroke={theme ? theme.backgroundColors.editIcon : stroke}
+        stroke={stroke}
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="2"

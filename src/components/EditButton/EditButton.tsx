@@ -2,6 +2,8 @@ import { observer } from "mobx-react";
 import React from "react";
 import styled from "styled-components";
 import { EditIcon } from "../Icons/EditIcon/EditIcon";
+import PostStore from "../../store/PostStore";
+import { darkTheme, lightTheme } from "../../styles/Theme";
 
 const SEditButton = styled.button`
   position: absolute;
@@ -29,9 +31,10 @@ export type TEditButtonProps = {
 };
 
 export const EditButton = observer(({ editButton }: TEditButtonProps) => {
+  const theme = PostStore.theme === "light" ? darkTheme : lightTheme;
   return (
     <SEditButton onClick={editButton.onClick}>
-      <EditIcon stroke={"#304ffe"} />
+      <EditIcon stroke={theme.backgroundColors.editIcon} />
     </SEditButton>
   );
 });

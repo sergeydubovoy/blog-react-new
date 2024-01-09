@@ -2,6 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import { DeleteIcon } from "../Icons/DeleteIcon/DeleteIcon";
 import { observer } from "mobx-react";
+import PostStore from "../../store/PostStore";
+import { darkTheme, lightTheme } from "../../styles/Theme";
 
 const SDeleteButton = styled.button`
   position: absolute;
@@ -28,9 +30,10 @@ export type TDeleteButtonProps = {
 };
 
 export const DeleteButton = observer(({ deleteButton }: TDeleteButtonProps) => {
+  const theme = PostStore.theme === "light" ? darkTheme : lightTheme;
   return (
     <SDeleteButton onClick={deleteButton.onClick}>
-      <DeleteIcon stroke={"#304ffe"} />
+      <DeleteIcon stroke={theme.backgroundColors.deleteIcon} />
     </SDeleteButton>
   );
 });

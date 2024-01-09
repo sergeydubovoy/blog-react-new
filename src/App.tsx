@@ -1,7 +1,19 @@
-import MainPage from "./pages/MainPage/MainPage";
+import { Route, Routes } from "react-router-dom";
+import { MainPage } from "./pages/MainPage/MainPage";
+import { PostPage } from "./pages/PostPage/PostPage";
+import { Layout } from "./components/Layout/Layout";
 
 function App() {
-  return <MainPage />;
+  return (
+    <>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<MainPage />} />
+          <Route path="posts/:postId" element={<PostPage />} />
+        </Route>
+      </Routes>
+    </>
+  );
 }
 
 export default App;

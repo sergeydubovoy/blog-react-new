@@ -17,10 +17,22 @@ export type TThemeProps = {
       form: string;
       body: string;
       addButton: string;
-      addButtonHover: string;
       deleteIcon: string;
       editIcon: string;
       closeIcon: string;
+      backIcon: string;
+      inputs: string;
+    };
+    borderColors: {
+      post: string;
+      form: string;
+      inputs: string;
+    };
+    hoverColors: {
+      inputs: string;
+      addButtonHover: string;
+    };
+    focusColors: {
       inputs: string;
     };
   };
@@ -41,11 +53,11 @@ export const lightTheme = {
     form: "#ffffff",
     body: "#edeef0",
     addButton: "#3375f6",
-    addButtonHover: "#304FFE",
     deleteIcon: "#517ab5",
     editIcon: "#517ab5",
     closeIcon: "#517ab5",
     closeIconFill: "white",
+    backIcon: "#517ab5",
     inputs: "white",
   },
   borderColors: {
@@ -54,7 +66,8 @@ export const lightTheme = {
     inputs: "#dfe3e6",
   },
   hoverColors: {
-    inputs: "#3375f6",
+    inputs: "#878787",
+    addButtonHover: "#304FFE",
   },
   focusColors: {
     inputs: "#3375f6",
@@ -76,11 +89,11 @@ export const darkTheme = {
     form: "#222222",
     body: "#141414",
     addButton: "#3949AB",
-    addButtonHover: "#3f51b5",
     deleteIcon: "#878787",
     editIcon: "#878787",
     closeIcon: "#878787",
     closeIconFill: "#8787872a",
+    backIcon: "#878787",
     inputs: "#222222",
   },
   borderColors: {
@@ -89,7 +102,8 @@ export const darkTheme = {
     inputs: "#363738",
   },
   hoverColors: {
-    inputs: "#3375f6",
+    inputs: "#878787",
+    addButtonHover: "#3f51b5",
   },
   focusColors: {
     inputs: "#3375f6",

@@ -16,7 +16,7 @@ export const SAddButton = styled.button`
   cursor: pointer;
 
   &:hover {
-    background-color: ${(props) => props.theme.backgroundColors.addButtonHover};
+    background-color: ${(props) => props.theme.hoverColors.addButtonHover};
   }
 
   &:disabled {

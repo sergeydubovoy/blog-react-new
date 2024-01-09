@@ -65,10 +65,8 @@ export const Form: React.FC<TFormProps> = observer(({ form }) => {
           disabled: PostStore.isInvalidTextLength(),
         }}
       />
-      {PostStore.isModalOpen ? (
+      {PostStore.isModalOpen && isModalForm && (
         <CloseButton onClick={PostStore.handleCloseButtonClick} />
-      ) : (
-        ""
       )}
     </SForm>
   );
