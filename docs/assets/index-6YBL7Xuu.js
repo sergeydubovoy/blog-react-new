@@ -2222,7 +2222,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
   margin-top: 20px;
   font-size: 18px;
   line-height: 18px;
-`,z2=ot(()=>{const{postId:e}=QR();x.useEffect(()=>{K.fetchPosts()},[e]);const t=K.posts.find(r=>r.id===e),n=K.theme==="light"?zi:Ui;return P.jsxs($A,{theme:n,children:[P.jsx(Mw,{style:{textDecoration:"none",position:"fixed",display:"flex"},to:"/",children:P.jsx($2,{})}),P.jsx(F2,{children:t?P.jsxs("div",{id:e,children:[P.jsx(j2,{children:t.title?t.title:"Нет заголовка"}),P.jsx(B2,{children:t.date?t.date:"Нет даты"}),P.jsx(U2,{children:t.text?t.text:"Нет текста"})]}):P.jsx(aS,{})})]})}),W2=K.theme==="light"?zi:Ui,H2=te.h1`
+`,z2=ot(()=>{const{postId:e}=QR();x.useEffect(()=>{K.fetchPosts()},[e]);const t=K.posts.find(r=>r.id===e),n=K.theme==="light"?zi:Ui;return P.jsxs($A,{theme:n,children:[P.jsx(Mw,{style:{textDecoration:"none",position:"fixed",display:"flex"},to:"/blog-react-new/",children:P.jsx($2,{})}),P.jsx(F2,{children:t?P.jsxs("div",{id:e,children:[P.jsx(j2,{children:t.title?t.title:"Нет заголовка"}),P.jsx(B2,{children:t.date?t.date:"Нет даты"}),P.jsx(U2,{children:t.text?t.text:"Нет текста"})]}):P.jsx(aS,{})})]})}),W2=K.theme==="light"?zi:Ui,H2=te.h1`
   text-align: center;
   text-transform: uppercase;
   font-size: 25px;

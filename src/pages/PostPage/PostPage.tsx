@@ -48,7 +48,7 @@ export const PostPage = observer(() => {
     <Theme theme={theme}>
       <Link
         style={{ textDecoration: "none", position: "fixed", display: "flex" }}
-        to={"/"}
+        to={"/blog-react-new/"}
       >
         <BackButton />
       </Link>
